@@ -1,0 +1,220 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css')
+    link(rel='stylesheet', href='css/style.css')
+    link(href='http://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css')
+    script(src='http://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js')
+    script(type='text/javascript').
+      $(".button-collapse").sideNav();
+  body
+    
+    section#mast(style='height: 465px;')
+      #mast_inner-1(style='overflow:hidden; background:url(http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg) no-repeat; background-size:cover;')
+        #mast_inner-2
+          video#mast_inner-2._534g(style='display: block;', autoplay='1', loop='1')
+            //source(src='http://riskeverything.us/wp-content/themes/risky/video/RE_homepage_22.webm')
+            source(src='https://a0.muscache.com/airbnb/static/Paris-P1-0.webm')
+            //source(src='video/stockholmByNight.webm')
+            img(src='http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg')
+      nav.mainNavigation.navvv
+        .row.nav-wrapper
+          .col.s12
+            a.brand-logo(href='#!')
+              span(style="font-family: 'Pacifico', cursive;")='ImmoNow'
+            ul.right.hide-on-med-and-down
+              li
+                a(href='index.jade')
+                  i.mdi-action-search.small
+              li
+                a(href='account.jade')
+                  i.mdi-action-perm-identity.small
+              li
+                a(href='about.jade')
+                  i.mdi-action-info-outline.small
+      .video-txt
+        hgroup.txtct
+          .container
+            .row
+              
+              h2(style='font-family: Circular;')='INSERAT ERFASSEN'
+              h4  
+                | Bitte fuellen Sie das Formular aus.
+              
+
+    section.searchResults
+      .container
+        .col.s12
+          h4='Bilder'
+        .row
+          .col.l6.m6
+            img(src='img/inseratBild1.jpeg' style='width:100%;')
+          .col.l2.m6
+            img(src='img/inseratBild2.jpeg' style='width:100%;')
+          .col.l2.m6
+            img(src='img/inseratBild3.jpg' style='width:100%;')
+          .col.l2.m6
+            img(src='img/inseratBild4.jpg' style='width:100%;')
+          .col.l2.m6
+            img(src='img/inseratBild5.jpg' style='width:100%;')
+          .col.l2.m6
+            a(href='addAdvert.jade')
+              .image-upload
+                label(for='file-input')
+                  img(src='img/addImage.jpeg' style='width:100%;')
+                input#file-input(type='file')
+
+        .row
+          form.col.l6
+            .row
+              .col.s12
+                h4='Adresse'
+              .input-field.col.s9
+                input#street.validate(type='text')
+                label(for='street') Strasse
+              .input-field.col.s2
+                input#last_name.validate(type='text')
+                label(for='streetnr') Nr.
+              .input-field.col.s3
+                input#plz.validate(type='text')
+                label(for='plz') PLZ
+              .input-field.col.s8
+                input#city.validate(type='text')
+                label(for='city') Ort
+            .row
+              .col.s12
+                h4='Typ'
+              form(action='#')
+                p.col.s6
+                  input#test1(name='group1', type='radio')
+                  label(for='test1') Zimmer
+                p.col.s6
+                  input#test2(name='group1', type='radio')
+                  label(for='test2') Wohnung
+                p.col.s6
+                  input#test3(name='group1', type='radio')
+                  label(for='test3') Einfamilienhaus
+                p.col.s6
+                  input#test4(name='group1', type='radio')
+                  label(for='test4') Mehrfamilienhaus
+          form.col.l6
+            .row
+              .col.s12
+                h4='Kerndaten'
+                
+              .input-field.col.l3
+                input#rooms.validate(type='text')
+                label(for='rooms') Anz. Zimmer
+              .input-field.col.l3
+                input#etage.validate(type='text')
+                label(for='etage') Etage
+              .input-field.col.l3
+                input#flaeche.validate(type='text')
+                label(for='flaeche') Wohnflaeche
+              .input-field.col.l3
+                input#baujahr.validate(type='text')
+                label(for='baujahr') Baujahr
+              .input-field.col.l6
+                input#verfuegbar.validate(type='text')
+                label(for='Verfuegbar') Verfuegbar ab
+        .row
+          form.col.l6
+            .row
+              .col.s12
+                h4='Ausstattung'
+              .col.s6
+                b
+                  p='Lift'
+                .switch
+                  label
+                    | Nein
+                    input(type='checkbox')
+                    span.lever
+                    |       Ja
+              .col.s6
+                b
+                  p='Balkon'
+                .switch
+                  label
+                    | Nein
+                    input(type='checkbox')
+                    span.lever
+                    |       Ja
+              .col.s6
+                b
+                  p='Rollstull'
+                .switch
+                  label
+                    | Nein
+                    input(type='checkbox')
+                    span.lever
+                    |       Ja
+              .col.s6
+                b
+                  p='Minergie'
+                .switch
+                  label
+                    | Nein
+                    input(type='checkbox')
+                    span.lever
+                    |       Ja
+          form.col.l6
+            .row
+              .col.s12
+                h4='Merkmale'
+              form(action='#')
+
+                  p.col.s6
+                    input#merkmalA.filled-in(type='checkbox')
+                    label(for='merkmalA') Merkmal A
+                  p.col.s6
+                    input#merkmalB.filled-in(type='checkbox')
+                    label(for='merkmalB') Merkmal B
+                  p.col.s6
+                    input#merkmalC.filled-in(type='checkbox')
+                    label(for='merkmalC') Merkmal C
+
+        .row
+          form.col.l12
+            h4='Beschreibung'
+            form.col.s12
+              .row
+                .input-field.col.s12
+                  textarea#textarea1.materialize-textarea
+                  label(for='textarea1') Beschreibungstext
+
+        .row
+          .col.l12
+            a.waves-effect.waves-light.btn(href='index.jade')
+              i.mdi-action-done.right
+              | Erstellen
+      br
+
+            
+
+    footer.page-footer.blue-grey.lighten-1
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text ImmoNow
+            p.grey-text.text-lighten-4 ImmoNow ist eine neuartige Immobilienplattform.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3(href='#!') Immobliensuche
+              li
+                a.grey-text.text-lighten-3(href='#!') Inserieren
+              li
+                a.grey-text.text-lighten-3(href='#!') Login
+      .footer-copyright
+        .container
+          | &copy; 2015, Seraya Takahashi
+          a.grey-text.text-lighten-4.right(href='#!') Github
+
+
+
+

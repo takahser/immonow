@@ -109,3 +109,25 @@ http://riskeverything.us/*/
 .txtct {
     text-align: center;
 }
+
+
+/* about page */
+.promo-caption {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.promo i {
+    font-size: 7rem;
+    display: block;
+}
+
+/* file upload*/
+.image-upload > input
+{
+    display: none;
+}
+.image-upload img:hover{
+    cursor:pointer;
+}

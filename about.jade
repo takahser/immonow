@@ -1,0 +1,113 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css')
+    link(rel='stylesheet', href='css/style.css')
+    link(href='http://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css')
+    script(src='http://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js')
+    script(type='text/javascript').
+      $(".button-collapse").sideNav();
+  body
+    
+    section#mast(style='height: 465px;')
+      #mast_inner-1(style='overflow:hidden; background:url(http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg) no-repeat; background-size:cover;')
+        #mast_inner-2
+          video#mast_inner-2._534g(style='display: block;', autoplay='1', loop='1')
+            //source(src='http://riskeverything.us/wp-content/themes/risky/video/RE_homepage_22.webm')
+            //source(src='https://a0.muscache.com/airbnb/static/Paris-P1-0.webm')
+            //source(src='video/stockholmByNight.webm')
+            source(src='video/team.webm')
+            img(src='http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg')
+      nav.mainNavigation.navvv
+        .row.nav-wrapper
+          .col.s12
+            a.brand-logo(href='#!')
+              span(style="font-family: 'Pacifico', cursive;")='ImmoNow'
+            ul.right.hide-on-med-and-down
+              li
+                a(href='index.jade')
+                  i.mdi-action-search.small
+              li
+                a(href='account.jade')
+                  i.mdi-action-perm-identity.small
+              li
+                a(href='about.jade')
+                  i.mdi-action-info-outline.small
+      .video-txt
+        hgroup.txtct
+          .container
+            .row
+              
+              h2(style='font-family: Circular;')='UEBER UNS'
+              h4  
+                | Suchen Sie noch oder wohnen Sie schon?
+              
+
+    section.searchResults
+      .container
+        
+
+        .row
+          h3(class="col s12 light center header")='Unsere Unternehmens-Philosophie'
+          .col.s12.m4
+            .center.promo
+              i.mdi-image-flash-on.blue-grey-text
+              p.promo-caption Speeds up development
+              p.light.center
+                | We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+          .col.s12.m4
+            .center.promo
+              i.mdi-social-group.blue-grey-text
+              p.promo-caption User Experience Focused
+              p.light.center
+                | By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+          .col.s12.m4
+            .center.promo
+              i.mdi-action-settings.blue-grey-text
+              p.promo-caption Easy to work with
+              p.light.center
+                | We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+
+        .row
+          .col.s12.m12
+            h4.blue-grey-text='Kontakt'
+          .col.s12.m8.l8
+            iframe(width='100%', height='450', frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?q=netradox%20ag%2C%20Alte%20Winterthurerstrasse%2C%20Wallisellen%2C%20Switzerland&key=AIzaSyDUdbwQBviAn7qBTm16HmsUDlXz7zf9ANQ')
+
+          .col.s12.m4.l4
+            b
+              p(style='line-height: 0.5;')='immonow ag'
+            p(style='line-height: 0.5;')='Sonnenbergstrasse 66'
+            p(style='line-height: 0.5;')='8603 Schwerzenbach'
+            p(style='line-height: 0.5;')='immonow ag'
+            br
+            p(style='line-height: 0.5;')='Tel. +41 44 123 45 67'
+            span(style='line-height: 0.5;')='E-Mail '
+              a(href='')='info@immonow.ch'
+
+    footer.page-footer.blue-grey.lighten-1
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text ImmoNow
+            p.grey-text.text-lighten-4 ImmoNow ist eine neuartige Immobilienplattform.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3(href='#!') Immobliensuche
+              li
+                a.grey-text.text-lighten-3(href='#!') Inserieren
+              li
+                a.grey-text.text-lighten-3(href='#!') Login
+      .footer-copyright
+        .container
+          | &copy; 2015, Seraya Takahashi
+          a.grey-text.text-lighten-4.right(href='#!') Github
+
+
+
+

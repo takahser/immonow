@@ -1,0 +1,130 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css')
+    link(rel='stylesheet', href='css/style.css')
+    link(href='http://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css')
+    script(src='http://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js')
+    script(type='text/javascript').
+      $(".button-collapse").sideNav();
+  body
+    
+    section#mast(style='height: 465px;')
+      #mast_inner-1(style='overflow:hidden; background:url(http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg) no-repeat; background-size:cover;')
+        #mast_inner-2
+          video#mast_inner-2._534g(style='display: block;', autoplay='1', loop='1')
+            //source(src='http://riskeverything.us/wp-content/themes/risky/video/RE_homepage_22.webm')
+            source(src='https://a0.muscache.com/airbnb/static/Paris-P1-0.webm')
+            //source(src='video/stockholmByNight.webm')
+            img(src='http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg')
+      nav.mainNavigation.navvv
+        .row.nav-wrapper
+          .col.s12
+            a.brand-logo(href='#!')
+              span(style="font-family: 'Pacifico', cursive;")='ImmoNow'
+            ul.right.hide-on-med-and-down
+              li
+                a(href='sass.html')
+                  i.mdi-action-search.small
+              li
+                a(href='components.html')
+                  i.mdi-action-view-module.small
+              li
+                a(href='javascript.html')
+                  i.mdi-navigation-refresh.small
+              li
+                a(href='mobile.html')
+                  i.mdi-navigation-more-vert.small
+      .video-txt
+        hgroup.txtct
+          .container
+            .row
+              
+              h2(style='font-family: Circular;')='IMMOBILIENSUCHE'
+              //a.btn.white(href='#learn') Learn More
+              nav(style='background: rgba(0, 0, 0, 0.5)')
+                  .nav-wrapper
+                    form
+                      .input-field
+                        input#search(type='search', required='')
+                        label(for='search')
+                          i.mdi-action-search
+                        i.mdi-navigation-close
+
+    section.searchResults
+      .container
+        .row
+          .col.s12.m4
+            .card
+              .card-image.waves-effect.waves-block.waves-light
+                img.activator(src='http://media.images-tiscover.com/at/images/ACC/140/ACC104640at/haus-waldrand01-oberndorf.jpeg')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4
+                  | Haus, Zurich
+                  i.mdi-navigation-more-vert.right
+                p
+                  | 1234.- CHF
+              .card-reveal
+                span.card-title.grey-text.text-darken-4
+                  | Haus, Zurich
+                  i.mdi-navigation-close.right
+                p(style='line-height: 0.5;')='Letzigraben 123'
+                p(style='line-height: 0.5;')='8047 Zurich'
+          .col.s12.m4
+            .card
+              .card-image.waves-effect.waves-block.waves-light
+                img.activator(src='http://www.markutt.ch/media/Ferienwohnungen/Jasmin%20Nr.%20103/Jasmin%20Nr.%20103%20(01).jpg')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4
+                  | Wohnung, Brugg
+                  i.mdi-navigation-more-vert.right
+                p
+                  | 1234.- CHF
+              .card-reveal
+                span.card-title.grey-text.text-darken-4
+                  | Wohnung, Brugg
+                  i.mdi-navigation-close.right
+                p(style='line-height: 0.5;')='Letzigraben 123'
+                p(style='line-height: 0.5;')='8047 Zurich'
+          .col.s12.m4
+            .card
+              .card-image.waves-effect.waves-block.waves-light
+                img.activator(src='http://www.ziher-haus.at/Portals/0/LiveGallery/446/Images/enokapnica_oslo.jpg')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4
+                  | Haus, Stettbach
+                  i.mdi-navigation-more-vert.right
+                p
+                  | 1234.- CHF
+              .card-reveal
+                span.card-title.grey-text.text-darken-4
+                  | Haus, Stettbach
+                  i.mdi-navigation-close.right
+                p(style='line-height: 0.5;')='Letzigraben 123'
+                p(style='line-height: 0.5;')='8047 Zurich'
+    footer.page-footer.blue-grey.lighten-1
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text ImmoNow
+            p.grey-text.text-lighten-4 ImmoNow ist eine neuartige Immobilienplattform.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3(href='#!') Immobliensuche
+              li
+                a.grey-text.text-lighten-3(href='#!') Inserieren
+              li
+                a.grey-text.text-lighten-3(href='#!') Login
+      .footer-copyright
+        .container
+          | &copy; 2015, Seraya Takahashi
+          a.grey-text.text-lighten-4.right(href='#!') Github
+
+
+
+

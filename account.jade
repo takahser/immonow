@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css')
+    link(rel='stylesheet', href='css/style.css')
+    link(href='http://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css')
+    script(src='http://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js')
+    script(type='text/javascript').
+      $(".button-collapse").sideNav();
+  body
+    
+    section#mast(style='height: 465px;')
+      #mast_inner-1(style='overflow:hidden; background:url(http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg) no-repeat; background-size:cover;')
+        #mast_inner-2
+          video#mast_inner-2._534g(style='display: block;', autoplay='1', loop='1')
+            //source(src='http://riskeverything.us/wp-content/themes/risky/video/RE_homepage_22.webm')
+            //source(src='https://a0.muscache.com/airbnb/static/Paris-P1-0.webm')
+            //source(src='video/stockholmByNight.webm')
+            source(src='video/team.webm')
+            img(src='http://riskeverything.us/wp-content/themes/risky/images/splash-home.jpg')
+      nav.mainNavigation.navvv
+        .row.nav-wrapper
+          .col.s12
+            a.brand-logo(href='#!')
+              span(style="font-family: 'Pacifico', cursive;")='ImmoNow'
+            ul.right.hide-on-med-and-down
+              li
+                a(href='index.jade')
+                  i.mdi-action-search.small
+              li
+                a(href='account.jade')
+                  i.mdi-action-perm-identity.small
+              li
+                a(href='about.jade')
+                  i.mdi-action-info-outline.small
+      .video-txt
+        hgroup.txtct
+          .container
+            .row
+              
+              h2(style='font-family: Circular;')='REGISTRIEREN'
+              h4  
+                | Zur Nutzung des erweiterten Bereichs registieren Sie sich bitte.
+              
+
+    section.searchResults
+      .container
+        .row
+          form.col.s12
+            .row
+              .input-field.col.s6
+                input#email.validate(type='text')
+                label(for='email') Vorname
+              .input-field.col.s6
+                input#email.validate(type='text')
+                label(for='email') Nachname
+            .row
+              .input-field.col.s6
+                input#email.validate(type='text')
+                label(for='email') Firma
+              
+              .input-field.col.s6
+                input#email.validate(type='email')
+                label(for='email') Email
+            .row
+              .input-field.col.s6
+                input#password.validate(type='password')
+                label(for='password') Password
+            
+              .input-field.col.s6
+                input#password.validate(type='password')
+                label(for='password') Password
+            .row
+              .col.s8
+                a.waves-effect.waves-light.btn(href='accountLogin.jade') Registrieren
+              
+
+    footer.page-footer.blue-grey.lighten-1
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text ImmoNow
+            p.grey-text.text-lighten-4 ImmoNow ist eine neuartige Immobilienplattform.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3(href='#!') Immobliensuche
+              li
+                a.grey-text.text-lighten-3(href='#!') Inserieren
+              li
+                a.grey-text.text-lighten-3(href='#!') Login
+      .footer-copyright
+        .container
+          | &copy; 2015, Seraya Takahashi
+          a.grey-text.text-lighten-4.right(href='#!') Github
+
+
+
+
