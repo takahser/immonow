@@ -1,20 +1,56 @@
-#!/usr/bin/env node
-var http = require('http')
-  , jade = require('jade')
-  , static = require('node-static')
-  , jadeRe = /\.jade$/
-  , path = process.argv.slice(2)[0]
-  , fileServer = new static.Server(path || '.')
+/**
+ * Module dependencies.
+ */
 
-http.createServer(function (req, res) {
-  if (req.url.match(jadeRe)) {
-    res.writeHead(200, {'Content-Type': 'text/html'})
-    res.end(jade.renderFile('.' + req.url, {
-      filename: '.' + req.url.replace(jadeRe, '')
-    }))
-  } else {
-    req.addListener('end', function () {
-      fileServer.serve(req, res)
-    }).resume()
-  }
-}).listen(80)
+var express = require('express');
+
+// Path to our public directory
+
+var pub = __dirname + '/public';
+
+// setup middleware
+
+var app = express();
+app.use(express.static(pub));
+
+// Optional since express defaults to CWD/views
+
+app.set('views', __dirname + '/views');
+
+// Set our default template engine to "jade"
+// which prevents the need for extensions
+// (although you can still mix and match)
+app.set('view engine', 'jade');
+
+function User(name, email) {
+  this.name = name;
+  this.email = email;
+}
+
+// Dummy users
+var users = [
+    new User('tj', 'tj@vision-media.ca')
+  , new User('ciaran', 'ciaranj@gmail.com')
+  , new User('aaron', 'aaron.heckmann+github@gmail.com')
+];
+
+app.get('/', function(req, res){
+  res.render('index');
+});
+
+app.get('/*', function(req, res){
+  console.log(req.url);
+  res.render(req.url.replace("/",""));
+});
+
+// change this to a better error handler in your code
+// sending stacktrace to users in production is not good
+app.use(function(err, req, res, next) {
+  res.send(err.stack);
+});
+
+/* istanbul ignore next */
+if (!module.parent) {
+  app.listen(3000);
+  console.log('Express started on port 3000');
+}
