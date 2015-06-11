@@ -51,6 +51,7 @@ app.use(function(err, req, res, next) {
 
 /* istanbul ignore next */
 if (!module.parent) {
-  app.listen(80);
+  var port = process.env.PORT || 3000;
+  app.listen(port);
   console.log('Express started on port 3000');
 }
