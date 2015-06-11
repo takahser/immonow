@@ -1,0 +1,7 @@
+{
+  "name": "immonow",
+  "description": "static prototype",
+  "repository": "https://github.com/takahser/immonow",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"]
+}
