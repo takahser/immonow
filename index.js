@@ -12,34 +12,23 @@ var pub = __dirname + '/public';
 
 var app = express();
 app.use(express.static(pub));
-
-// Optional since express defaults to CWD/views
-
-app.set('views', __dirname + '/views');
+app.use("/css", express.static(__dirname + '/css'));
+app.use("/font", express.static(__dirname + '/font'));
+app.use("/img", express.static(__dirname + '/img'));
+app.use("/js", express.static(__dirname + '/js'));
+app.use("/video", express.static(__dirname + '/video'));
 
 // Set our default template engine to "jade"
 // which prevents the need for extensions
 // (although you can still mix and match)
 app.set('view engine', 'jade');
 
-function User(name, email) {
-  this.name = name;
-  this.email = email;
-}
-
-// Dummy users
-var users = [
-    new User('tj', 'tj@vision-media.ca')
-  , new User('ciaran', 'ciaranj@gmail.com')
-  , new User('aaron', 'aaron.heckmann+github@gmail.com')
-];
-
 app.get('/', function(req, res){
   res.render('index');
 });
 
 app.get('/*', function(req, res){
-  console.log(req.url);
+  console.log(req.url.replace("/",""));
   res.render(req.url.replace("/",""));
 });
 
